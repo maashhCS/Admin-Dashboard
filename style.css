@@ -1,7 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway&family=Roboto&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style-type: none;
+    font-family: 'Roboto', sans-serif;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 185px 3fr;
+}
+
+.left-sidepanel {
+    display: grid;
+    grid-template-rows: 1fr 4fr 2fr 2.2fr;
+    background-color: #1992d4;
+    grid-column: 1;
+    grid-row: 1 / 3;
+    max-height: 100vh;
+}
+
+.header {
+    grid-column: 2 / 8;
+    grid-row: 1;
+    -webkit-box-shadow: 4px 12px 11px -11px rgba(0,0,0,0.37); 
+    box-shadow: 4px 12px 11px -11px rgba(11, 42, 214, 0.37);
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    padding-bottom: 8px;
+    padding-left: 32px;
+    gap: 26px;
+    min-width: 664px;
+}
+
+.main {
+    background-color: #e2e8f0;
+    grid-column: 2 / 8;
+    grid-row: 2;
+    max-height: 80vh;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    font-size: 1.8em;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.logo img {
+    width: 75px;
+    height: auto;
+}
+
+.main-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    grid-row: 2;
+    padding-left: 24px;
+}
+
+.main-links ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+}
+
+.main-links ul li a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main-links a {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.main-links a img {
+    width: 28px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.secondary-links {
+    grid-row: 3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 24px;
+}
+
+.secondary-links a img {
+    width: 28px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.secondary-links a {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.secondary-links ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+}
+
+.secondary-links ul li a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.search-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-icon img {
+    width: 28px;
+    height: auto;
+}
+
+.search-bar {
+    width: 500px;
+    flex: 1;
+}
+
+.search-bar input {
+    background-color: #e2e8f0;
+    border: none;
+    outline: none;
+    width: 100%;
+    min-width: 200px;
+    border-radius: 25px;
+    padding: 6px 12px; 
+    font-size: 16px;
+}
+
+.bell-icon {
+    padding: 0 5px;
+    margin-left: 100px;
+}
+
+.bell-icon img {
+    width: 28px;
+    height: auto;
+}
+
+.profile-picture {
+    margin-left: 16px;
+}
+
+.profile-picture img {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.header-section-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.header-username {
+    display: flex;
+    justify-content: center;
+    margin-left: 14px;
+    margin-right: 50px;
+}
+
+.header-username h1 {
+    font-size: 22px;
+}
+
+.header-section-2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-picture-section-2 img{
+    width: 75px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.greeting {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.create-post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.header-button {
+    border: none;
+    border-radius: 50px;
+    background-color: #1992d4;
+    color: white;
+    font-size: 18px;
+    width: 80px;
+    height: 40px;
+}
+
+.profile-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    min-width: 335px;
+}
+
+.header-section-2 span {
+    min-width: 100px;
+    width: 95%;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.project-card {
+    grid-column: 1;
+    grid-row: 1  / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 24px;
+}
+
+.card {
+    background-color: white;
+    height: 75%;
+    border-left: 6px #f0b429 solid;
+    border-radius: 7px;
+    box-shadow: 0px 2px 3px rgb(175, 175, 175);
+    padding: 30px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.card-text h1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+}
+
+.card-icons img {
+    width: 24px;
+    height: auto;
+}
+
+.announcement-card {
+    height: 100%;
+    background-color: white;
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 0px;
+    padding: 0px 24px;
+}
+
+.side {
+    padding: 0 24px;
+    padding-left: 0;
+}
+
+.side-padding-top {
+    padding-top: 24px;
+}
+
+.trending-card {
+    background-color: white;
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 24px;
+    padding: 24px;
+    max-height: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-card {
+    border-radius: 5px;
+    box-shadow: 0px 2px 3px rgb(175, 175, 175);
+}
+
+.announcement-card-text-header {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.announcement-card-text {
+    font-size: 12px;
+    font-weight: 400;
+    padding-left: 8px;
+}
+
+.announcement-card-section {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.trending-card-profile img {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.trending-card-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.trending-card-profile-tag {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.trending-card-profile-name {
+    font-size: 12px;
+    font-weight: 400;
+}
